@@ -1,4 +1,3 @@
-import Layout from "./layout/MainLayout.jsx"
 
 const Contacto = () =>{
 
