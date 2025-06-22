@@ -3,10 +3,6 @@ body {
   background-color: #f8f9fa;
 }
 
-.hero {
-  background: linear-gradient(135deg, #343a40 0%, #495057 100%);
-}
-
 .navbar-brand {
   font-size: 1.5rem;
 }
@@ -33,16 +29,4 @@ body {
 .btn-outline-primary:hover {
   background-color: #0d6efd;
   color: white;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-    padding: 2rem !important;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
 }

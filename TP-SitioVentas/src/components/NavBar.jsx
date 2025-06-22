@@ -11,7 +11,7 @@ const Navbar = () => {
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <nav className="navbar navbar-expand-lg navbar-white bg-white sticky-top shadow">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <span className="fw-bold">TechMobile</span>

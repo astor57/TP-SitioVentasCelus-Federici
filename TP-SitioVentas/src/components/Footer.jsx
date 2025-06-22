@@ -7,16 +7,16 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4 mb-3">
             <h5>TechMobile</h5>
-            <p className="text-muted">
-              Tu tienda de confianza para los mejores smartphones del mercado.
+            <p className="text-white">
+              Tu tienda de confianza para los mejores celulares del mercado.
             </p>
           </div>
           <div className="col-md-4 mb-3">
             <h5>Enlaces rápidos</h5>
             <ul className="list-unstyled">
-              <li><a href="/" className="text-decoration-none text-muted">Inicio</a></li>
-              <li><a href="/productos" className="text-decoration-none text-muted">Productos</a></li>
-              <li><a href="/contacto" className="text-decoration-none text-muted">Contacto</a></li>
+              <li><a href="/" className="text-white">Inicio</a></li>
+              <li><a href="/productos" className="text-white">Productos</a></li>
+              <li><a href="/contacto" className="text-white">Contacto</a></li>
             </ul>
           </div>
           <div className="col-md-4 mb-3">
