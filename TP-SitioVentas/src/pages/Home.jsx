@@ -6,14 +6,12 @@ const Home = () => {
   const [destacados, setDestacados] = useState([]);
 
   useEffect(() => {
-    // Simular carga de datos destacados
     const destacadosData = celulares.sort(() => 0.5 - Math.random()).slice(0, 3);
     setDestacados(destacadosData);
   }, []);
 
   return (
     <div className="container py-4">
-      
       <section className="my-5">
         <h2 className="text-center mb-4">Productos Destacados</h2>
         <div className="row">

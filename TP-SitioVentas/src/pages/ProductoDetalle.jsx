@@ -11,7 +11,6 @@ const ProductoDetalle = () => {
   useEffect(() => {
     const productoId = parseInt(id);
     const productoEncontrado = celulares.find(p => p.id === productoId);
-    
     if (productoEncontrado) {
       setProducto(productoEncontrado);
       const marcaEncontrada = marcas.find(m => m.id === productoEncontrado.marcaId);
@@ -36,7 +35,7 @@ const ProductoDetalle = () => {
               src={producto.fotos[imagenPrincipal]} 
               alt={producto.nombre} 
               className="img-fluid rounded shadow"
-              style={{ maxHeight: '400px', objectFit: 'contain' }}
+              style={{ maxHeight: '500px', objectFit: 'contain' }}
             />
           </div>
           <div className="d-flex gap-2">

@@ -4,11 +4,11 @@ import { marcas } from '../data/data';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [abierto, setAbierto] = useState(false);
+  const [productosAbierto, setProductosAbierto] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  const hamburguesa = () => setAbierto(!abierto);
+  const hamburguesaAbierta = () => setProductosAbierto(!productosAbierto);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-white bg-white sticky-top shadow">
@@ -20,18 +20,18 @@ const Navbar = () => {
         <button 
           className="navbar-toggler" 
           type="button" 
-          onClick={toggleMenu}
+          onClick={hamburguesa}
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {abierto ? <FaTimes /> : <FaBars />}
         </button>
         
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
+        <div className={`collapse navbar-collapse ${abierto ? 'show' : ''}`}>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink 
                 className="nav-link" 
                 to="/" 
-                onClick={() => setIsOpen(false)}
+                onClick={() => setAbierto(false)}
               >
                 Inicio
               </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
               <NavLink 
                 className="nav-link" 
                 to="/quienes-somos" 
-                onClick={() => setIsOpen(false)}
+                onClick={() => setAbierto(false)}
               >
                 Quiénes Somos
               </NavLink>
@@ -48,18 +48,18 @@ const Navbar = () => {
             <li className="nav-item dropdown">
               <button 
                 className="nav-link dropdown-toggle btn btn-link" 
-                onClick={toggleDropdown}
+                onClick={hamburguesaAbierta}
               >
-                Productos <FaChevronDown className="ms-1" />
+                Productos
               </button>
-              <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+              <ul className={`dropdown-menu ${productosAbierto ? 'show' : ''}`}>
                 <li>
                   <Link 
                     className="dropdown-item" 
                     to="/productos" 
                     onClick={() => {
-                      setIsOpen(false);
-                      setDropdownOpen(false);
+                      setAbierto(false);
+                      setProductosAbierto(false);
                     }}
                   >
                     Ver todos
@@ -71,8 +71,8 @@ const Navbar = () => {
                       className="dropdown-item" 
                       to={`/productos/marca/${marca.id}`}
                       onClick={() => {
-                        setIsOpen(false);
-                        setDropdownOpen(false);
+                        setAbierto(false);
+                        setProductosAbierto(false);
                       }}
                     >
                       {marca.nombre}
@@ -85,7 +85,7 @@ const Navbar = () => {
               <NavLink 
                 className="nav-link" 
                 to="/contacto" 
-                onClick={() => setIsOpen(false)}
+                onClick={() => setAbierto(false)}
               >
                 Contacto
               </NavLink>

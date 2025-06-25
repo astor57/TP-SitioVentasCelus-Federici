@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const Contacto = () => {
-  const [formData, setFormData] = useState({
+  const [infoForm, setInfoForm] = useState({
     nombre: '',
     email: '',
     telefono: '',
@@ -11,7 +11,7 @@ const Contacto = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setInfoForm(prev => ({
       ...prev,
       [name]: value
     }));
@@ -19,8 +19,8 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-    setFormData({
+    alert('Gracias por tu mensaje. Nos pondremos en contacto pronto.');
+    setInfoForm({
       nombre: '',
       email: '',
       telefono: '',
@@ -45,7 +45,7 @@ const Contacto = () => {
                 className="form-control" 
                 id="nombre" 
                 name="nombre"
-                value={formData.nombre}
+                value={infoForm.nombre}
                 onChange={handleChange}
                 required
               />
@@ -57,7 +57,7 @@ const Contacto = () => {
                 className="form-control" 
                 id="email" 
                 name="email"
-                value={formData.email}
+                value={infoForm.email}
                 onChange={handleChange}
                 required
               />
@@ -69,7 +69,7 @@ const Contacto = () => {
                 className="form-control" 
                 id="telefono" 
                 name="telefono"
-                value={formData.telefono}
+                value={infoForm.telefono}
                 onChange={handleChange}
               />
             </div>
@@ -80,7 +80,7 @@ const Contacto = () => {
                 id="mensaje" 
                 rows="4"
                 name="mensaje"
-                value={formData.mensaje}
+                value={infoForm.mensaje}
                 onChange={handleChange}
                 required
               ></textarea>

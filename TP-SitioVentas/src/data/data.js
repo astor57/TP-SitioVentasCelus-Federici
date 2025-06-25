@@ -26,8 +26,8 @@ export const celulares = [
     precio: 999,
     marcaId: 2,
     fotos: [
-      'https://images.samsung.com/is/image/samsung/p6pim/ar/2401/gallery/ar-galaxy-s23-sm-s911bzkjaro-thumb-539917559',
-      'https://images.samsung.com/is/image/samsung/p6pim/ar/2401/gallery/ar-galaxy-s23-sm-s911bzkjaro-539917543'
+      'https://images.samsung.com/is/image/samsung/p6pim/ar/2302/gallery/ar-galaxy-s23-s911-446628-sm-s911bzemaro-535075054?$684_547_PNG$',
+      'https://images.samsung.com/is/image/samsung/p6pim/ar/2302/gallery/ar-galaxy-s23-s911-446628-sm-s911bzemaro-535075042?$684_547_JPG$'
     ]
   },
   {
@@ -37,8 +37,8 @@ export const celulares = [
     precio: 899,
     marcaId: 3,
     fotos: [
-      'https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-13-pro/specs-header.png',
-      'https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-13-pro/specs-header2.png'
+      'https://ar.celulares.com/fotos/xiaomi-redmi-note-13-pro-97398-g-alt.jpg',
+      'https://imei.org/storage/files/images/12072/preview/xiaomi-redmi-note-13-pro-2.png'
     ]
   },
   {
@@ -48,8 +48,8 @@ export const celulares = [
     precio: 699,
     marcaId: 4,
     fotos: [
-      'https://motorolaar.vtexassets.com/arquivos/ids/158434-800-auto?width=800&height=auto&aspect=true',
-      'https://motorolaar.vtexassets.com/arquivos/ids/158435-800-auto?width=800&height=auto&aspect=true'
+      'https://armoto.vtexassets.com/arquivos/ids/165379-1200-auto?v=638412650244170000&width=1200&height=auto&aspect=true',
+      'https://i.blogs.es/45176e/motorola-edge-40-1/650_1200.jpeg'
     ]
   },
   {
@@ -70,8 +70,8 @@ export const celulares = [
     precio: 1199,
     marcaId: 2,
     fotos: [
-      'https://images.samsung.com/is/image/samsung/p6pim/ar/2401/gallery/ar-galaxy-z-flip5-sm-f731bzkjaro-539917543',
-      'https://images.samsung.com/is/image/samsung/p6pim/ar/2401/gallery/ar-galaxy-z-flip5-sm-f731bzkjaro-539917559'
+      'https://images.samsung.com/uy/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-kv-a.jpg?imbypass=true',
+      'https://images.samsung.com/ar/smartphones/galaxy-z-flip5/images/galaxy-z-flip5-highlights-colors-mint-mo.jpg?imbypass=true'
     ]
   },
   {
@@ -81,8 +81,8 @@ export const celulares = [
     precio: 399,
     marcaId: 3,
     fotos: [
-      'https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-12/specs-header.png',
-      'https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-12/specs-header2.png'
+      'https://comunidadxiaomi.com.ar/wp-content/uploads/2024/04/111NOTE122-644983c7e793c.jpg',
+      'https://i.blogs.es/ae4cb3/redmi-note-12/650_1200.jpeg'
     ]
   },
   {
@@ -92,8 +92,8 @@ export const celulares = [
     precio: 999,
     marcaId: 4,
     fotos: [
-      'https://motorolaar.vtexassets.com/arquivos/ids/158438-800-auto?width=800&height=auto&aspect=true',
-      'https://motorolaar.vtexassets.com/arquivos/ids/158439-800-auto?width=800&height=auto&aspect=true'
+      'https://armoto.vtexassets.com/arquivos/ids/165378-1200-auto?v=638412648325970000&width=1200&height=auto&aspect=true',
+      'https://armoto.vtexassets.com/arquivos/ids/164588-1200-auto?v=638748964516170000&width=1200&height=auto&aspect=true'
     ]
   },
   {
@@ -103,8 +103,8 @@ export const celulares = [
     precio: 1099,
     marcaId: 5,
     fotos: [
-      'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p60-pro/img/kv/kv.jpg',
-      'https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p60-pro/img/kv/kv2.jpg'
+      'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2023/05/huawei-p60-pro.jpg?fit=1920%2C1080&quality=50&strip=all&ssl=1',
+      'https://cdn-files.kimovil.com/default/0008/54/thumb_753074_default_big.jpg'
     ]
   },
   {
@@ -114,8 +114,8 @@ export const celulares = [
     precio: 999,
     marcaId: 6,
     fotos: [
-      'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/pixel8pro_colors_1.jpg',
-      'https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/pixel8pro_colors_2.jpg'
+      'https://i.blogs.es/1cc524/img_1796/375_375.jpeg',
+      'https://i.blogs.es/8cea83/pixel-8-pro-diseno/450_1000.jpeg'
     ]
   }
 ];
