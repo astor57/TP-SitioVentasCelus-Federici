@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { celulares } from '../data/data';
 import CardCelular from '../components/CardCelular';
 
+
 const Home = () => {
   const [destacados, setDestacados] = useState([]);
 

@@ -5,7 +5,7 @@ const QuienesSomos = () => {
           <div className="col-lg-6 mb-4">
             <h1 className="mb-4">Quiénes Somos</h1>
             <p className="lead">
-              En TechMobile nos apasiona la tecnología y queremos acercarte los mejores dispositivos al mejor precio.
+              En MobileMinds nos apasiona la tecnología y queremos acercarte los mejores dispositivos al mejor precio.
             </p>
             <p>
               Fundada en 2015, nos hemos convertido en una de las tiendas de celulares más confiables del país, 
@@ -36,7 +36,7 @@ const QuienesSomos = () => {
                     ofreciendo productos de calidad, asesoramiento experto y un servicio excepcional, 
                     todo a precios competitivos."
                   </p>
-                  <footer className="blockquote-footer mt-2">Fundador de TechMobile</footer>
+                  <footer className="blockquote-footer mt-2">Fundador de MobileMinds</footer>
                 </blockquote>
               </div>
             </div>

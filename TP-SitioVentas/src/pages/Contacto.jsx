@@ -116,7 +116,7 @@ const Contacto = () => {
                   <FaEnvelope /> Email
                 </h5>
                 <p className="ms-4">
-                  <a href="mailto:info@techmobile.com" className="text-decoration-none">info@techmobile.com</a>
+                  <a href="mailto:info@mobileminds.com" className="text-decoration-none">info@mobileminds.com</a>
                 </p>
               </div>
               

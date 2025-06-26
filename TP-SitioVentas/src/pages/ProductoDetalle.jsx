@@ -68,11 +68,11 @@ const ProductoDetalle = () => {
             <p>{producto.descripcion}</p>
           </div>
           
-          <div className="d-flex gap-2 mb-4">
-            <button className="btn btn-primary btn-lg">
+          <div className="d-flex flex-wrap gap-3 mb-4">
+            <button className="btn btn-primary btn-lg px-4 py-2 flex-grow-1">
               Comprar ahora
             </button>
-            <button className="btn btn-outline-secondary btn-lg">
+            <button className="btn btn-outline-dark btn-lg px-4 py-2 flex-grow-1">
               Agregar al carrito
             </button>
           </div>
