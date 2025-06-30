@@ -8,7 +8,7 @@ const QuienesSomos = () => {
               En MobileMinds nos apasiona la tecnología y queremos acercarte los mejores dispositivos al mejor precio.
             </p>
             <p>
-              Fundada en 2015, nos hemos convertido en una de las tiendas de celulares más confiables del país, 
+              Fundada en 2010, nos hemos convertido en una de las tiendas de celulares más confiables del país, 
               gracias a nuestro compromiso con la calidad y la satisfacción del cliente.
             </p>
             <p>

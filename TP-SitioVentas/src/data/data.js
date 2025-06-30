@@ -1,10 +1,34 @@
 export const marcas = [
-  { id: 1, nombre: 'Apple' },
-  { id: 2, nombre: 'Samsung' },
-  { id: 3, nombre: 'Xiaomi' },
-  { id: 4, nombre: 'Motorola' },
-  { id: 5, nombre: 'Huawei' },
-  { id: 6, nombre: 'Google' }
+  { 
+    id: 1, 
+    nombre: 'Apple',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'
+  },
+  { 
+    id: 2, 
+    nombre: 'Samsung',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg'
+  },
+  { 
+    id: 3, 
+    nombre: 'Xiaomi',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg'
+  },
+  { 
+    id: 4, 
+    nombre: 'Motorola',
+    logo: 'https://i.pinimg.com/736x/c1/f3/58/c1f358b33a77cab0e76f5c7e398e45e2.jpg'
+  },
+  { 
+    id: 5, 
+    nombre: 'Huawei',
+    logo: 'https://1000logos.net/wp-content/uploads/2018/08/Huawei-Logo.png'
+  },
+  { 
+    id: 6, 
+    nombre: 'Google',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg'
+  }
 ];
 
 export const celulares = [

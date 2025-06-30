@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { celulares } from '../data/data';
 import CardCelular from '../components/CardCelular';
+import MarcasDestacadas from '../components/MarcasDestacadas';
+
 
 
 const Home = () => {
@@ -43,6 +45,8 @@ const Home = () => {
               <p>Hasta 12 cuotas sin interés con todas las tarjetas</p>
             </div>
           </div>
+                <MarcasDestacadas />
+
         </div>
       </section>
     </div>
