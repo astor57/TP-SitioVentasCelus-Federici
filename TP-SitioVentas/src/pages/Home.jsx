@@ -27,24 +27,7 @@ const Home = () => {
       <section className="my-5 bg-light p-4 rounded">
         <h3 className="text-center mb-3">¿Por qué elegirnos?</h3>
         <div className="row text-center">
-          <div className="col-md-4 mb-3">
-            <div className="p-3">
-              <h4>🛡️ Garantía</h4>
-              <p>12 meses de garantía en todos nuestros productos</p>
-            </div>
-          </div>
-          <div className="col-md-4 mb-3">
-            <div className="p-3">
-              <h4>🚚 Envíos</h4>
-              <p>Envío gratis en compras superiores a $50.000</p>
-            </div>
-          </div>
-          <div className="col-md-4 mb-3">
-            <div className="p-3">
-              <h4>💳 Financiación</h4>
-              <p>Hasta 12 cuotas sin interés con todas las tarjetas</p>
-            </div>
-          </div>
+          
                 <MarcasDestacadas />
 
         </div>

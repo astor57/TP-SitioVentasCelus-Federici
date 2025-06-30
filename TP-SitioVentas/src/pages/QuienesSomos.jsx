@@ -18,7 +18,7 @@ const QuienesSomos = () => {
           </div>
           <div className="col-lg-6">
             <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+              src="https://revistabyte.es/wp-content/uploads/2021/05/organiza-el-flujo-de-trabajo-en-el-equipo-del-proyecto-de-ti.jpg" 
               alt="Nuestro equipo" 
               className="img-fluid rounded shadow"
             />
