@@ -30,21 +30,12 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${abierto ? 'show' : ''}`}>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
-              <NavLink 
-                className="nav-link" 
-                to="/" 
-                onClick={() => setAbierto(false)}
-                end
-              >
+              <NavLink className="nav-link" to="/" onClick={() => setAbierto(false)} end>
                 Inicio
               </NavLink>
             </li>
             <li className="nav-item mx-1">
-              <NavLink 
-                className="nav-link" 
-                to="/quienes-somos" 
-                onClick={() => setAbierto(false)}
-              >
+              <NavLink className="nav-link" to="/quienes-somos" onClick={() => setAbierto(false)}>
                 Quiénes Somos
               </NavLink>
             </li>
@@ -57,9 +48,7 @@ const Navbar = () => {
               </button>
               <ul className={`dropdown-menu ${productoAbierto ? 'show' : ''}`}>
                 <li>
-                  <Link 
-                    className="dropdown-item" 
-                    to="/productos" 
+                  <Link className="dropdown-item" to="/productos" 
                     onClick={() => {
                       setAbierto(false);
                       setProductoAbierto(false);
@@ -71,9 +60,7 @@ const Navbar = () => {
                 <li><hr className="dropdown-divider" /></li>
                 {marcas.map(marca => (
                   <li key={marca.id}>
-                    <Link 
-                      className="dropdown-item" 
-                      to={`/productos/marca/${marca.id}`}
+                    <Link className="dropdown-item" to={`/productos/marca/${marca.id}`}
                       onClick={() => {
                         setAbierto(false);
                         setProductoAbierto(false);
@@ -86,9 +73,7 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item mx-1">
-              <NavLink 
-                className="nav-link" 
-                to="/contacto" 
+              <NavLink className="nav-link" to="/contacto" 
                 onClick={() => setAbierto(false)}
               >
                 Contacto
