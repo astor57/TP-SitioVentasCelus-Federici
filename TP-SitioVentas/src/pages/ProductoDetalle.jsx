@@ -1,108 +1,199 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { celulares, marcas } from '../data/data';
+import { FaStar, FaChevronLeft, FaChevronRight, FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
 
-const ProductoDetalle = () => {
+function ProductoDetalle() {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const [marca, setMarca] = useState(null);
-  const [imagenPrincipal, setImagenPrincipal] = useState(0);
+  const [imagenMostrada, setImagenMostrada] = useState(0);
+  const [cantidad, setCantidad] = useState(1);
 
   useEffect(() => {
-    const productoId = parseInt(id);
-    const productoEncontrado = celulares.find(p => p.id === productoId);
-    if (productoEncontrado) {
-      setProducto(productoEncontrado);
-      const marcaEncontrada = marcas.find(m => m.id === productoEncontrado.marcaId);
-      setMarca(marcaEncontrada);
+    const numId = Number(id);
+    const productoBuscado = celulares.find(cel => cel.id === numId);
+    
+    if (productoBuscado) {
+      setProducto(productoBuscado);
+      const marcaBuscada = marcas.find(m => m.id === productoBuscado.marcaId);
+      setMarca(marcaBuscada);
     }
   }, [id]);
 
+  function cambiarImagen(sentido) {
+    if (sentido === 'siguiente') {
+      setImagenMostrada(prev => (prev === producto.fotos.length - 1 ? 0 : prev + 1));
+    } else {
+      setImagenMostrada(prev => (prev === 0 ? producto.fotos.length - 1 : prev - 1));
+    }
+  }
+
   if (!producto) {
     return (
-      <div className="container py-4">
-        <div className="alert alert-warning">Producto no encontrado</div>
+      <div className="producto-no-encontrado">
+        <div className="alerta-producto">
+          <h4>Producto no encontrado</h4>
+          <button className="btn-volver">
+            <FaArrowLeft /> Volver
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="container py-4">
-      <div className="row">
-        <div className="col-md-6">
-          <div className="mb-3">
-            <img 
-              src={producto.fotos[imagenPrincipal]} 
-              alt={producto.nombre} 
-              className="img-fluid rounded shadow"
-              style={{ maxHeight: '500px', objectFit: 'contain' }}
-            />
-          </div>
-          <div className="d-flex gap-2">
-            {producto.fotos.map((foto, index) => (
+    <div className="pagina-producto">
+      <div className="contenedor-producto">
+        <div className="fila-producto">
+          {/* Parte izquierda - Fotos */}
+          <div className="columna-fotos">
+            <div className="contenedor-imagen-principal">
+              <img 
+                src={producto.fotos[imagenMostrada]} 
+                alt={producto.nombre}
+                className="imagen-principal"
+              />
+              
               <button 
-                key={index}
-                className={`btn btn-outline-secondary ${imagenPrincipal === index ? 'active' : ''}`}
-                onClick={() => setImagenPrincipal(index)}
+                onClick={() => cambiarImagen('anterior')}
+                className="boton-navegacion anterior"
               >
-                <img 
-                  src={foto} 
-                  alt={`Miniatura ${index + 1}`} 
-                  style={{ width: '50px', height: '50px', objectFit: 'cover' }}
-                />
+                <FaChevronLeft />
               </button>
-            ))}
+              
+              <button 
+                onClick={() => cambiarImagen('siguiente')}
+                className="boton-navegacion siguiente"
+              >
+                <FaChevronRight />
+              </button>
+            </div>
+            
+            <div className="contenedor-miniaturas">
+              {producto.fotos.map((foto, index) => (
+                <img
+                  key={index}
+                  src={foto}
+                  alt={`Miniatura ${index + 1}`}
+                  onClick={() => setImagenMostrada(index)}
+                  className={`miniatura ${imagenMostrada === index ? 'activa' : ''}`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="col-md-6">
-          <h1>{producto.nombre}</h1>
-          {marca && (
-            <p className="text-muted">
-              Marca: <span className="badge bg-primary">{marca.nombre}</span>
-            </p>
-          )}
-          <h3 className="text-primary my-3">${producto.precio.toLocaleString()}</h3>
-          
-          <div className="mb-4">
-            <h5>Descripción</h5>
-            <p>{producto.descripcion}</p>
-          </div>
-          
-          <div className="d-flex flex-wrap gap-3 mb-4">
-            <button className="btn btn-primary btn-lg px-4 py-2 flex-grow-1">
-              Comprar ahora
-            </button>
-            <button className="btn btn-outline-dark btn-lg px-4 py-2 flex-grow-1">
-              Agregar al carrito
-            </button>
-          </div>
-          
-          <div className="card bg-light">
-            <div className="card-body">
-              <h6 className="card-title">Garantía y envíos</h6>
-              <ul className="small">
-                <li>12 meses de garantía</li>
-                <li>Envío gratis a todo el país</li>
-                <li>Devolución gratuita en 30 días</li>
-              </ul>
+
+          {/* Parte derecha - Información */}
+          <div className="columna-info">
+            <div className="contenedor-info">
+              <h1 className="nombre-producto">{producto.nombre}</h1>
+              
+              {marca && (
+                <span className="marca-producto">
+                  {marca.nombre}
+                </span>
+              )}
+              
+              <div className="rating-producto">
+                <FaStar className="estrella-llena" />
+                <FaStar className="estrella-llena" />
+                <FaStar className="estrella-llena" />
+                <FaStar className="estrella-llena" />
+                <FaStar className="estrella-vacia" />
+                <span className="texto-rating">(24 opiniones)</span>
+              </div>
+              
+              <h2 className="precio-producto">
+                ${producto.precio.toLocaleString()}
+              </h2>
+              
+              <p className="envio-gratis">
+                <strong>Envío gratis</strong> a todo el país
+              </p>
+              
+              <div className="seccion-descripcion">
+                <h3>Descripción</h3>
+                <p>{producto.descripcion}</p>
+              </div>
+              
+              <div className="seccion-caracteristicas">
+                <h3>Características</h3>
+                <ul className="lista-caracteristicas">
+                  <li>Pantalla grande de 6.5"</li>
+                  <li>Cámara profesional</li>
+                  <li>Batería de larga duración</li>
+                  <li>Procesador rápido</li>
+                </ul>
+              </div>
+              
+              <div className="selector-cantidad">
+                <label>Cantidad:</label>
+                <div className="controles-cantidad">
+                  <button 
+                    onClick={() => setCantidad(cantidad > 1 ? cantidad - 1 : 1)}
+                    className="boton-cantidad"
+                  >
+                    -
+                  </button>
+                  <input 
+                    type="number" 
+                    value={cantidad}
+                    onChange={(e) => setCantidad(Number(e.target.value) || 1)}
+                    min="1"
+                    className="input-cantidad"
+                  />
+                  <button 
+                    onClick={() => setCantidad(cantidad + 1)}
+                    className="boton-cantidad"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              
+              <div className="botones-compra">
+                <button className="boton-primario">
+                  <FaShoppingCart className="icono-carrito" />
+                  Agregar al carrito
+                </button>
+                
+                <button className="boton-secundario">
+                  Comprar ahora
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div className="row mt-5">
-        <div className="col-12">
-          <h4>Características principales</h4>
-          <ul className="list-group">
-            <li className="list-group-item">Pantalla de alta resolución</li>
-            <li className="list-group-item">Cámara profesional</li>
-            <li className="list-group-item">Batería de larga duración</li>
-            <li className="list-group-item">Procesador de última generación</li>
-          </ul>
+        
+        {/* Productos similares */}
+        <div className="productos-similares">
+          <h3>Productos similares</h3>
+          <div className="fila-productos">
+            {celulares
+              .filter(c => c.marcaId === producto.marcaId && c.id !== producto.id)
+              .slice(0, 4)
+              .map(celular => (
+                <div className="columna-producto" key={celular.id}>
+                  <div className="card-producto">
+                    <img 
+                      src={celular.fotos[0]} 
+                      alt={celular.nombre}
+                      className="imagen-producto"
+                    />
+                    <div className="info-producto">
+                      <h5>{celular.nombre}</h5>
+                      <p className="precio-producto-similar">
+                        ${celular.precio.toLocaleString()}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProductoDetalle;
