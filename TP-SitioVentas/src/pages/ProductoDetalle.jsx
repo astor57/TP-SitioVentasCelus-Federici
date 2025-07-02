@@ -46,7 +46,6 @@ function ProductoDetalle() {
     <div className="pagina-producto">
       <div className="contenedor-producto">
         <div className="fila-producto">
-          {/* Parte izquierda - Fotos */}
           <div className="columna-fotos">
             <div className="contenedor-imagen-principal">
               <img 
@@ -83,7 +82,6 @@ function ProductoDetalle() {
             </div>
           </div>
 
-          {/* Parte derecha - Información */}
           <div className="columna-info">
             <div className="contenedor-info">
               <h1 className="nombre-producto">{producto.nombre}</h1>
@@ -165,25 +163,22 @@ function ProductoDetalle() {
           </div>
         </div>
         
-        {/* Productos similares */}
         <div className="productos-similares">
           <h3>Productos similares</h3>
           <div className="fila-productos">
             {celulares
               .filter(c => c.marcaId === producto.marcaId && c.id !== producto.id)
-              .slice(0, 4)
               .map(celular => (
                 <div className="columna-producto" key={celular.id}>
-                  <div className="card-producto">
+                  <div className="card">
                     <img 
-                      src={celular.fotos[0]} 
-                      alt={celular.nombre}
+                      src={celular.fotos} 
                       className="imagen-producto"
                     />
                     <div className="info-producto">
                       <h5>{celular.nombre}</h5>
                       <p className="precio-producto-similar">
-                        ${celular.precio.toLocaleString()}
+                        ${celular.precio}
                       </p>
                     </div>
                   </div>

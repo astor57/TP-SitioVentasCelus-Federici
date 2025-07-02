@@ -21,13 +21,12 @@ const Navbar = () => {
         <button 
           className="navbar-toggler" 
           type="button" 
-          onClick={hamburguesa}
           aria-label="Toggle navigation"
         >
           {abierto ? <FaTimes /> : <FaBars />}
         </button>
         
-        <div className={`collapse navbar-collapse ${abierto ? 'show' : ''}`}>
+        <div>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
               <NavLink className="nav-link" to="/" onClick={() => setAbierto(false)} end>

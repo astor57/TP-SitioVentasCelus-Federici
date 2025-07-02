@@ -27,13 +27,8 @@ const Productos = () => {
     <div className="container py-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h1>
-          {marcaSeleccionada 
-            ? `Productos de ${marcaSeleccionada.nombre}` 
-            : 'Todos nuestros productos'}
+          Nuestros productos
         </h1>
-        <small className="text-muted">
-          {productos.length} {productos.length === 1 ? 'producto' : 'productos'}
-        </small>
       </div>
       
       {productos.length === 0 ? (

@@ -40,11 +40,7 @@ const Contacto = () => {
           <form onSubmit={handleSubmit} className="mt-4">
             <div className="mb-3">
               <label htmlFor="nombre" className="form-label">Nombre</label>
-              <input 
-                type="text" 
-                className="form-control" 
-                id="nombre" 
-                name="nombre"
+              <input type="text" className="form-control" id="nombre" name="nombre"
                 value={infoForm.nombre}
                 onChange={handleChange}
                 required
@@ -52,11 +48,7 @@ const Contacto = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email</label>
-              <input 
-                type="email" 
-                className="form-control" 
-                id="email" 
-                name="email"
+              <input type="email" className="form-control" id="email" name="email"
                 value={infoForm.email}
                 onChange={handleChange}
                 required
@@ -64,22 +56,14 @@ const Contacto = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="telefono" className="form-label">Teléfono</label>
-              <input 
-                type="tel" 
-                className="form-control" 
-                id="telefono" 
-                name="telefono"
+              <input type="tel" className="form-control" id="telefono" name="telefono"
                 value={infoForm.telefono}
                 onChange={handleChange}
               />
             </div>
             <div className="mb-3">
               <label htmlFor="mensaje" className="form-label">Mensaje</label>
-              <textarea 
-                className="form-control" 
-                id="mensaje" 
-                rows="4"
-                name="mensaje"
+              <textarea className="form-control" id="mensaje" rows="4"name="mensaje"
                 value={infoForm.mensaje}
                 onChange={handleChange}
                 required
@@ -106,8 +90,8 @@ const Contacto = () => {
                   <FaPhone /> Teléfonos
                 </h5>
                 <p className="ms-4">
-                  <a href="tel:+541112345678" className="text-decoration-none">+54 11 1234-5678</a><br />
-                  <a href="tel:+541198765432" className="text-decoration-none">+54 11 9876-5432</a>
+                  <a className="text-decoration-none">+54 11 1234-5678</a><br />
+                  <a className="text-decoration-none">+54 11 9876-5432</a>
                 </p>
               </div>
               
@@ -116,7 +100,7 @@ const Contacto = () => {
                   <FaEnvelope /> Email
                 </h5>
                 <p className="ms-4">
-                  <a href="mailto:info@mobileminds.com" className="text-decoration-none">info@mobileminds.com</a>
+                  <a  className="text-decoration-none">info@mobileminds.com</a>
                 </p>
               </div>
               

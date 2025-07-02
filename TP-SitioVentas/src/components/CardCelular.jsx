@@ -12,9 +12,6 @@ const CardCelular = ({ celular }) => {
         />
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{celular.nombre}</h5>
-          <p className="card-text text-muted mb-3">
-            {celular.descripcion.substring(0, 60)}...
-          </p>
           <div className="mt-auto">
             <h6 className="text-primary">${celular.precio.toLocaleString()}</h6>
             <Link 

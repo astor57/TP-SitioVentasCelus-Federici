@@ -3,8 +3,6 @@ import { celulares } from '../data/data';
 import CardCelular from '../components/CardCelular';
 import MarcasDestacadas from '../components/MarcasDestacadas';
 
-
-
 const Home = () => {
   const [destacados, setDestacados] = useState([]);
 
@@ -27,9 +25,7 @@ const Home = () => {
       <section className="my-5 bg-light p-4 rounded">
         <h3 className="text-center mb-3">¿Por qué elegirnos?</h3>
         <div className="row text-center">
-          
                 <MarcasDestacadas />
-
         </div>
       </section>
     </div>

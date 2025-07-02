@@ -10,7 +10,7 @@ const Footer = () => {
               <FaMobileAlt size={24} className="text-primary" />
               <h4 className="ms-2 mb-0">MobileMinds</h4>
             </div>
-            <p className="text-muted">
+            <p>
               Líderes en venta de smartphones con la mejor calidad y servicio al cliente.
             </p>
             <div className="d-flex gap-3 mt-3">
@@ -34,7 +34,7 @@ const Footer = () => {
               </li>
               <li className="mb-2 d-flex align-items-center">
                 <FaEnvelope className="me-2 text-primary" />
-                <a href="mailto:info@techmobile.com">info@mobileminds.com</a>
+                <a>info@mobileminds.com</a>
               </li>
               <li className="d-flex align-items-center">
                 <FaClock className="me-2 text-primary" />
@@ -45,25 +45,20 @@ const Footer = () => {
           
           <div className="col-lg-4">
             <h5>Newsletter</h5>
-            <p className="text-muted">Suscríbete para recibir ofertas exclusivas</p>
+            <p className="">Suscríbete para recibir ofertas exclusivas</p>
             <div className="input-group mb-3">
-              <input 
-                type="email" 
-                className="form-control" 
-                placeholder="Tu email" 
-                aria-label="Tu email" 
+              <input type="email" className="form-control" placeholder="Tu email" 
               />
               <button className="btn btn-primary" type="button">
                 Suscribir
               </button>
             </div>
-            <small className="text-muted">No compartiremos tu email con nadie.</small>
           </div>
         </div>
         
         <hr className="my-4 border-secondary" />
         
-        <div className="text-center text-muted">
+        <div className="text-center">
           <small>
             &copy; {new Date().getFullYear()} MobileMinds - Todos los derechos reservados
           </small>
