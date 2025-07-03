@@ -9,8 +9,8 @@ const Productos = () => {
   const [marcaSeleccionada, setMarcaSeleccionada] = useState(null);
 
   useEffect(() => {
-    let productosFiltrados = [...celulares];
-    
+  let productosFiltrados = celulares.slice();
+
     if (idMarca) {
       const marcaId = parseInt(idMarca);
       productosFiltrados = productosFiltrados.filter(p => p.marcaId === marcaId);
