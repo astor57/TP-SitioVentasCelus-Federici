@@ -29,7 +29,7 @@ const Navbar = () => {
         <div>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item mx-1">
-              <NavLink className="nav-link" to="/" onClick={() => setAbierto(false)} end>
+              <NavLink className="nav-link" to="/" onClick={() => setAbierto(false)}>
                 Inicio
               </NavLink>
             </li>
